@@ -1,0 +1,26 @@
+<app-divider>Table Component</app-divider>
+<app-table class="striped celled" [data]="data" [headers]="headers"></app-table>
+
+<app-divider>Tab Menu</app-divider>
+<app-tabs>
+  <!-- NOTES: 
+        1. Alternative routerlink syntax (preferred way in professional code?) using property binding syntax, 
+        (ex: [routerLink]=["./", "companies"], which creates link "./companies")  
+        2. RouterLinkActiveOptions property exact tells Angular that only consider link active when the URL exactly matches matched link
+        (ex: Biograghy w/ out exact = true allows active class to be applied whenever links contains './collections/' or '/collections/partners' etc.)
+    -->
+
+  <a
+    routerLink="./"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="item"
+    >Biography</a
+  >
+  <a routerLink="./companies" routerLinkActive="active" class="item">
+    Companies</a
+  >
+  <a routerLink="./partners" routerLinkActive="active" class="item">
+    Partners</a
+  >
+</app-tabs>

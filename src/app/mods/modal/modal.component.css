@@ -1,0 +1,16 @@
+.actions:empty {
+  display: none;
+}
+
+.actions-default {
+  display: none;
+}
+
+/* 
+   + selector finds an element after the initially selected one. 
+   That means the rule .actions:empty + .actions-default will look for an element with the class 'actions' that is empty, 
+   then attempt to find an element right after it with the class 'actions-default'.
+*/
+.actions:empty + .actions-default {
+  display: block;
+}
